@@ -1,4 +1,57 @@
+// Gallery Layout
 
+article.gallery {
+    display: flex;
+    gap: var(--space-30);
+    flex-flow: wrap;
+    justify-content: space-around;
+
+    .image-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr; 
+        grid-template-rows: 1fr 1fr;
+        gap: var(--space-10);    
+        width: calc(var(--column-width-two-third) - var(--space-30));
+
+        
+        @media screen and (max-width:767px) {
+            width: var(--column-width-row);
+            display: flex;
+            flex-direction: column;
+        }
+
+        > * {
+            overflow: hidden;
+            white-space: nowrap;
+                
+            img {
+                height: 100%;
+                transform: translateX(-50%);
+                margin-left: 50%;
+
+                @media screen and (max-width:767px) {
+                    width: 100%;
+                }
+            }
+        }
+
+        .photo-1 {
+            grid-row: span 2;
+        }
+    }
+
+    .information-content {
+
+        width: calc(var(--column-width-one-third) - var(--space-30));
+
+        @media screen and (max-width:767px) {
+            width: var(--column-width-row);
+        }
+    }
+}
+
+
+// Gallery Modal
     .gallery-photos {
 
             &.photo-1 {

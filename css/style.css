@@ -68,6 +68,7 @@ main {
   margin: 0 auto var(--space-30);
 }
 
+/* container section */
 .content-section {
   max-width: var(--container-width-1146);
   margin: 0 auto;
@@ -109,6 +110,7 @@ main {
   font-weight: bold;
 }
 
+/* gallery section */
 article.gallery {
   display: flex;
   gap: var(--space-30);
@@ -155,6 +157,7 @@ article.gallery .information-content {
   }
 }
 
+/* Dialog Frame Box*/
 .cards {
   display: flex;
   gap: var(--space-10);

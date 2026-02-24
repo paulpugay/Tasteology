@@ -23,7 +23,7 @@ main {
     margin: 0 auto var(--space-30);
 }
 
-
+/* container section */
 .content-section {
     max-width: var(--container-width-1146);
     margin: 0 auto ;
@@ -70,6 +70,8 @@ main {
     }
 }
 
+
+/* gallery section */
 article.gallery {
     display: flex;
     gap: var(--space-30);
@@ -123,8 +125,8 @@ article.gallery {
 }
 
 
-/* Cards CSS */
-@import "../plugins/cards/style"
+/* Dialog Frame Box*/
+@import "../plugins/cards/style";
 
 .modal-dialog-box {
     background-color: var(--white-color);
