@@ -1,0 +1,59 @@
+:root {
+
+/* Colors */
+--dark-blue-color: #0e1414;
+--red-color: #cf1430;
+--white-color: #fff;
+--black-color: #111;
+
+/* fonts */
+--default-type-face: "Open Sans";
+
+
+/* sizes */
+--heading-h1-size: 1.875rem;
+--heading-h2-size: 1.5rem;
+--heading-h3-size: 1.17rem;
+--heading-h4-size: 1rem;
+--heading-h5-size: 0.83rem;
+--heading-h6-size: 0.67rem;
+
+--default-font-size: 1.3125rem;
+--small-font-size: 0.9375rem;
+
+--line-height-143: 1.43em;
+--line-height-113: 1.13em;
+--line-height-111: 1.11em;
+--line-height-1: 1em;
+
+--font-weight-100: 100;
+--font-weight-300: 300;
+--font-weight-400: 400;
+--font-weight-600: 600;
+--font-weight-700: 700;
+
+/* Spacing */
+--space-120: 7.5rem;
+--space-30: 1.875rem;
+--space-10: 0.625rem;
+
+/* Containers */
+--container-width-1440: 90rem /*1440px*/;
+--container-width-1146: 71.625rem  /*1172*/;
+--container-width-312: 19.5rem /*312*/;
+
+--column-width-row: 100%; 
+--column-width-one-half: 50%;
+--column-width-one-third: 33.33%;
+--column-width-one-fourth: 25%;
+--column-width-one-fifth: 20%;
+--column-width-one-sixth: 16.67%;
+--column-width-two-third: 66.66%;
+
+/* alignment */
+
+--text-left: left; 
+--text-center: center;  
+--text-right: right;  
+
+}

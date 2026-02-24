@@ -1,0 +1,51 @@
+
+    .gallery-photos {
+
+            &.photo-1 {
+                ul {
+                    li.p1 {
+                        display: block;
+                    }
+                }
+            }
+
+            &.photo-2 {
+                ul {
+                    li.p2 {
+                        display: block;
+                    }
+                }
+            }
+
+            &.photo-3 {
+                ul {
+                    li.p3 {
+                        display: block;
+                    }
+                }
+            }
+
+            ul {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                flex-direction: row;
+                overflow: hidden;
+                width: 100%;
+                white-space: nowrap;
+                gap: var(--space-10);
+                align-items: center;
+                justify-content: center;
+            
+                li {
+                    display: none;
+                    
+                    img {
+                        width: 100%;
+                        max-height: 30em;
+                    }
+                }
+
+            }
+        }

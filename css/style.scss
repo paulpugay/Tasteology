@@ -1,0 +1,209 @@
+@import "root";
+
+body{
+    font-family: var(--default-type-face);
+    background-color: var(--dark-blue-color);
+    color: var(--white-color);
+    line-height: var(--line-heigh-143);
+    font-size: var(--default-font-size);
+    font-weight: var(--font-weight-300);
+}
+
+a {
+    text-decoration: none;
+}
+
+main {
+    max-width: var(--container-width-1440);
+    margin:0  auto;
+}
+
+.ext-container {
+    max-width: var(--container-width-312);
+    margin: 0 auto var(--space-30);
+}
+
+
+.content-section {
+    max-width: var(--container-width-1146);
+    margin: 0 auto ;
+    padding: var(--space-120) 0;
+
+    @media screen and (max-width:1199px) {
+        padding: var(--space-30)  var(--space-10);
+    }
+
+    h1, h2 {
+        font-size: var(--heading-h1-size);
+        font-weight: var(--font-weight-300);
+        line-height: var(--line-heigh-11);
+        text-transform: uppercase;
+        margin-top: 0;
+        margin-bottom: var(--space-30);
+
+        &.align-content {
+            text-align: var(--text-center);
+        }
+    }
+
+    h3 {
+        font-size: var(--small-font-size);
+        color: var(--red-color);
+        margin-top: 0;
+        margin-bottom: var(--space-10);
+    }
+
+    hr {
+        margin-top: 0;
+        border-top: 0;
+        border-inline: 0;
+        margin-bottom: var(--space-30);
+    }
+
+    p {
+        margin-top: 0;
+        margin-bottom: var(--space-30);
+
+        strong {
+            font-weight: bold;
+        }
+    }
+}
+
+article.gallery {
+    display: flex;
+    gap: var(--space-30);
+    flex-flow: wrap;
+    justify-content: space-around;
+
+    .image-content {
+
+        
+        display: grid;
+        grid-template-columns: 1fr 1fr; 
+        grid-template-rows: 1fr 1fr;
+        gap: var(--space-10);    
+        width: calc(var(--column-width-two-third) - var(--space-30));
+
+        
+        @media screen and (max-width:767px) {
+            width: var(--column-width-row);
+            display: flex;
+            flex-direction: column;
+        }
+
+        > * {
+            overflow: hidden;
+            white-space: nowrap;
+                
+            img {
+                height: 100%;
+                transform: translateX(-50%);
+                margin-left: 50%;
+
+                @media screen and (max-width:767px) {
+                    width: 100%;
+                }
+            }
+        }
+
+        .photo-1 {
+            grid-row: span 2;
+        }
+    }
+
+    .information-content {
+
+        width: calc(var(--column-width-one-third) - var(--space-30));
+
+        @media screen and (max-width:767px) {
+            width: var(--column-width-row);
+        }
+    }
+}
+
+
+/* Cards CSS */
+@import "../plugins/cards/style"
+
+.modal-dialog-box {
+    background-color: var(--white-color);
+    border-radius: 30px;
+    padding: 20px;
+    box-shadow: 3px 4px 30px #111;
+    max-width: var(--container-width-1146);
+    margin-inline-start: auto;
+    color: var(--black-color);
+    margin: 0 auto;
+    margin-top: 10%;
+    display: none;
+    z-index: 5;
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 25rem;
+
+    @media screen and (max-width:767px) {
+        width: 80%;
+    }
+
+    &.show {
+        display: block;
+    }
+   
+
+    .top-modal {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: var(--space-10) 0;
+        border-bottom: 0.065rem solid #ddd;
+        margin-bottom: var(--space-30);
+
+        > * {
+            margin: 0;
+            padding: 0;
+        }
+
+        button {
+            padding: var(--space-10) calc(var(--space-10) * 2);
+            text-transform: uppercase;
+            border-radius: var(--space-10);
+            background-color: var(--white-color);
+        }
+    }
+
+    .body-modal {
+
+        @import "../plugins/gallery/gallery";
+
+    }
+
+    
+
+    
+
+    .bottom-modal {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: var(--space-10) 0;
+        border-top: 0.065rem solid #ddd;
+        margin-top: var(--space-30);
+    }
+
+}
+
+.background-overlay {
+    background-color: rgba(0, 0, 0, 0.8);
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: var(--column-width-row);
+    height: var(--column-width-row);
+    display: none;
+
+    &.show {
+        display: block;
+    }
+}
