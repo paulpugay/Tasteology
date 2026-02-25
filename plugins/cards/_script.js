@@ -7,15 +7,33 @@ photolink.forEach(click => {
     click.addEventListener("click", showClick)
 })
 
+
+// Image Page Link
+
+function showClick(e) {
+    const clickPlog = e.currentTarget
+
+    const photoLog = [...clickPlog.classList].find(cls =>
+        cls.startsWith("pagelink-")
+    )
+
+    console.log(photoLog + " photo link is clicked!")
+}
+
+
+// Text Title Page Link
+
 textlink.forEach(click => {
     click.addEventListener("click", showtextClick)
 })
 
+function showtextClick(e) {
+    const clickPlog = e.currentTarget
 
-function showClick() {
-    console.log("Photo is Clicked!")
+    const linkLog = [...clickPlog.classList].find(cls =>
+        cls.startsWith("pagelink-")
+    )
+
+    console.log( linkLog + " text link is clicked!")
 }
 
-function showtextClick() {
-    console.log("Link is Clicked!")
-}

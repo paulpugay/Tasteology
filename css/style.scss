@@ -125,9 +125,11 @@ article.gallery {
 }
 
 
-/* Dialog Frame Box*/
+/* Card plugin */
 @import "../plugins/cards/style";
 
+
+/* Dialog Frame Box*/
 .modal-dialog-box {
     background-color: var(--white-color);
     border-radius: 30px;
@@ -137,13 +139,12 @@ article.gallery {
     margin-inline-start: auto;
     color: var(--black-color);
     margin: 0 auto;
-    margin-top: 10%;
     display: none;
     z-index: 5;
-    position: fixed;
+    position: absolute;
     left: 50%;
-    transform: translate(-50%, -50%);
-    top: 25rem;
+    transform: translate(-50%, 0);
+    top: 50px;
 
     @media screen and (max-width:767px) {
         width: 80%;
